@@ -7,29 +7,27 @@ $Res = null;
         case 'Sum (+)':
             $Res = $a + $b;
             echo "<br>";
-            echo ($Res);
             break;
         case 'Subtraction (-)':
             $Res = $a - $b;
-            echo ($Res);
             echo "<br>";
             break;
         case 'Multiply (*)':
             $Res = $a * $b;
-            echo ($Res);
             echo "<br>";
             break;
         case 'Division (/)':
             $Res = $a / $b;
-            echo ($Res);
             echo "<br>";
             break;
         default :
-            $Res = "Check your selected operation or Check Input values...!";
-            echo ($Res);
+//            echo "Check your selected operation or Check Input values...!";
             echo "<br>";
             break;
     }
+echo "The Result is : ($Res)";
+
+//    var_dump($Res);
 ?>
 <html>
 <head>
@@ -37,15 +35,12 @@ $Res = null;
 </head>
 <body>
 <form action="" method="get" enctype="multipart/form-data">
-    number 1: <input type="number" name="num1" value="<?php $_GET['num1'] ?>"> <br>
-    number 2: <input type="number" name="num2" value="<?php $_GET['num2'] ?>"> <br>
-    <button value="<?php $_GET['op']?>" type="submit" name="Sum (+)">Sum (+)</button>
-    <button value="<?php $_GET['op']?>" type="submit" name="Subtraction (-)">Subtraction (-)</button>
-    <button value="<?php $_GET['op']?>" type="submit" name="Multiply (*)">Multiply (*)</button>
-    <button value="<?php $_GET['op']?>" type="submit" name="Division (/)">Division (/)</button>
+    num1: <input type="number" name="num1" value="<?php $_GET['num1'] ?>"> <br>
+    num2: <input type="number" name="num2" value="<?php $_GET['num2'] ?>"> <br>
+    <button value="Sum (+)" type="submit" name="op">Sum (+)</button>
+    <button value="Subtraction (-)" type="submit" name="op">Subtraction (-)</button>
+    <button value="Multiply (*)" type="submit" name="op">Multiply (*)</button>
+    <button value="Division (/)" type="submit" name="op">Division (/)</button>
 </form>
-<p>
-    Result is : <? echo ($Res); ?>
-</p>
 </body>
 </html>
