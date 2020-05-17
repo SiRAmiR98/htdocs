@@ -3,7 +3,7 @@ $a =$_REQUEST['num1'];
 $b =$_REQUEST['num2'];
 $op =$_REQUEST['op'];
 $Res = null;
-    switch (op) {
+    switch ($op) {
         case 'Sum (+)':
             $Res = $a + $b;
             echo "<br>";
@@ -37,8 +37,8 @@ $Res = null;
 </head>
 <body>
 <form action="" method="get" enctype="multipart/form-data">
-    number 1: <input type="number" name="first number" value="<?php $_GET['num1'] ?>"> <br>
-    number 2: <input type="number" name="second number" value="<?php $_GET['num2'] ?>"> <br>
+    number 1: <input type="number" name="num1" value="<?php $_GET['num1'] ?>"> <br>
+    number 2: <input type="number" name="num2" value="<?php $_GET['num2'] ?>"> <br>
     <button value="<?php $_GET['op']?>" type="submit" name="Sum (+)">Sum (+)</button>
     <button value="<?php $_GET['op']?>" type="submit" name="Subtraction (-)">Subtraction (-)</button>
     <button value="<?php $_GET['op']?>" type="submit" name="Multiply (*)">Multiply (*)</button>
